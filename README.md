@@ -51,6 +51,7 @@ source install/setup.bash
 ros2 run tello_controller controller
 
 Otwieramy nowy terminal i wpisujemy komendę:
+
 ros2 topic pub /iisrl/tello_controller std_msgs/msg/Empty -1
 
 
