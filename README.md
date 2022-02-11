@@ -39,7 +39,7 @@ https://pjreddie.com/media/files/yolov3.weights
 W pliku controller.py w linijce 85 i 86 należy podać ścieżkę do plików yolov3.cfg yolov3.weights i coco.names
 W pliku yolov3.cfg wymiar height i width powinnien być ten sam co w pliku controller.py w linijce 212 i 213
 
-Uruchamiamy gazebo i węzeł g2rr
+Uruchamiamy gazebo ze światem simple.world i węzeł g2rr
 Otwieramy nowy terminal i wpisujemy komendy:
 
 source tello_ros_ws/install/setup.bash 
