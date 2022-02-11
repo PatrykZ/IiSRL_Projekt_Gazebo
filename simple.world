@@ -1,0 +1,270 @@
+<?xml version="1.0"?>
+
+<sdf version="1.6">
+  <world name="default">
+
+    <!-- Tweak to run at higher or lower speeds -->
+    <physics name="normal" type="ode">
+      <real_time_update_rate>1000</real_time_update_rate>
+      <max_step_size>0.001</max_step_size>
+    </physics>
+
+    <!-- Ground plane -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <!-- Lighting -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <!-- Suv -->
+    <include>
+        <uri>model://suv</uri>
+	  <pose frame=''>10 0 0 0 -0 1.5</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>10 0 0 0 -0 1.5</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+    </include>
+
+
+	<!-- Pickup -->
+	<include>
+	<uri>model://pickup</uri>
+        <pose frame=''>0 -10 0 0 -0 1.5</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-0 -10 0 0 -0 1.5</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </include>
+
+
+	<!-- Bus -->
+      <include>
+	<uri>model://bus</uri>
+        <pose frame=''>2 15 0 0 -0 1.5</pose>
+        <scale>0.75 0.75 0.75</scale>
+        <link name='link'>
+          <pose frame=''>2 10 0 0 -0 1.5</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </include>
+
+
+	<!-- Ambulance -->
+	<include>
+	<uri>model://ambulance</uri>
+        <pose frame=''>-10 0 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-10 0 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </include>
+
+		<!-- Stop Sign -->
+	<include>
+	<uri>model://stop_sign</uri>
+        <pose frame=''>-10 -10 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-10 -10 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+    	</include>
+
+	<include>
+	<uri>model://fire_hydrant</uri>
+        <pose frame=''>10 -10 0 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>10 -10 0 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+	</include>
+
+		<!-- Person_standing -->
+	<include>
+	<uri>model://person_standing</uri>
+        <pose frame=''>-10 10 -0 -1e-06 -1e-06 0.000136</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-10 10 -0 -1e-06 -1e-06 0.000136</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-1.60909 1.13158 -1.51785 1.93873 -1.45609 -3.09684</acceleration>
+          <wrench>-128.727 90.5265 -121.428 0 -0 0</wrench>
+        </link>
+	</include>
+
+		<!-- Person_standing -->
+	<include>
+	<uri>model://person_standing</uri>
+        <pose frame=''>10 10 -0 -1e-06 -1e-06 0.000136</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>10 10 -0 -1e-06 -1e-06 0.000136</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-1.60909 1.13158 -1.51785 1.93873 -1.45609 -3.09684</acceleration>
+          <wrench>-128.727 90.5265 -121.428 0 -0 0</wrench>
+        </link>
+	</include>
+
+
+
+	<!-- Plane 
+	<include>
+	<uri>model://cessna</uri>
+ 	<pose frame=''>-13.135 -3.70137 0.492546 0.000389 -0.000453 -0.055638</pose>
+        <scale>1 1 1</scale>
+        <link name='body'>
+          <pose frame=''>-13.135 -3.70137 0.492546 0.000389 -0.000453 -0.055638</pose>
+          <velocity>-0.001583 0.001649 0.000158 -0.005091 0.001764 -2.4e-05</velocity>
+          <acceleration>0.01052 0.765737 0.576066 0.076411 -0.27055 -0.054122</acceleration>
+          <wrench>7.15751 520.999 391.949 0 -0 0</wrench>
+        </link>
+        <link name='elevators'>
+          <pose frame=''>-13.6089 -3.6761 3.37625 0.000451 -0.530454 -0.055866</pose>
+          <velocity>0.004706 0.016271 -0.001755 -0.005061 0.002283 -2.4e-05</velocity>
+          <acceleration>0.163541 1.10674 -0.967258 0.057864 -0.168751 -0.05419</acceleration>
+          <wrench>0.327082 2.21347 -1.93452 0 -0 0</wrench>
+        </link>
+        <link name='front_wheel'>
+          <pose frame=''>-13.1252 -3.70187 0.514125 0.000232 0.029881 -0.055633</pose>
+          <velocity>-0.0056 0.015077 -0.005233 -0.029595 -0.010959 -0.000322</velocity>
+          <acceleration>0.787177 11.9299 -6.55006 0.687951 -0.313008 -0.490799</acceleration>
+          <wrench>1.57435 23.8598 -13.1001 0 -0 0</wrench>
+        </link>
+        <link name='left_aileron'>
+          <pose frame=''>-12.7411 -3.82931 1.62451 -0.061616 -0.526477 -0.066275</pose>
+          <velocity>-0.000368 0.008101 -0.010957 -0.004259 0.006449 0.000216</velocity>
+          <acceleration>0.193688 0.799145 0.254355 -0.153582 -1.12706 -0.100111</acceleration>
+          <wrench>0.387376 1.59829 0.508711 0 -0 0</wrench>
+        </link>
+        <link name='left_flap'>
+          <pose frame=''>-12.6497 -3.74883 1.49331 0.003636 -0.530333 -0.067586</pose>
+          <velocity>-0.000219 0.006798 -0.002611 -0.005034 0.002779 -4e-06</velocity>
+          <acceleration>0.017674 0.82763 0.213969 0.034046 -0.437117 -0.058535</acceleration>
+          <wrench>0.035348 1.65526 0.427937 0 -0 0</wrench>
+        </link>
+        <link name='propeller'>
+          <pose frame=''>-11.3481 -3.80123 1.34836 0.003977 -0.000453 -0.055638</pose>
+          <velocity>-7.5e-05 0.005687 -0.002486 0.000185 0.001478 -0.000261</velocity>
+          <acceleration>0.035721 0.271198 0.963079 -0.013986 -0.259806 -0.461639</acceleration>
+          <wrench>0.656197 4.9819 17.6918 0 -0 0</wrench>
+        </link>
+        <link name='rear_left_wheel'>
+          <pose frame=''>-13.1384 -3.70097 0.513776 -0.000397 -0.013842 -0.05564</pose>
+          <velocity>0.000395 0.00154 0.009498 -0.003068 0.000326 0.00016</velocity>
+          <acceleration>0.232868 0.626801 0.096332 -2.51948 0.965126 0.091298</acceleration>
+          <wrench>0.465736 1.2536 0.192664 0 -0 0</wrench>
+        </link>
+        <link name='rear_right_wheel'>
+          <pose frame=''>-13.1522 -3.70093 0.563781 0.002024 -0.061902 -0.055762</pose>
+          <velocity>0.006363 0.013838 -0.04789 -0.019749 0.017836 0.002867</velocity>
+          <acceleration>4.76273 5.66078 -8.90267 -2.44978 1.13799 -1.27595</acceleration>
+          <wrench>9.52547 11.3216 -17.8053 0 -0 0</wrench>
+        </link>
+        <link name='right_aileron'>
+          <pose frame=''>-12.7293 -3.61885 1.62465 0.062519 -0.526511 -0.045453</pose>
+          <velocity>0.007101 0.012101 0.085077 -0.002692 -0.035475 0.00183</velocity>
+          <acceleration>3.5314 0.749584 -6.26884 -2.15989 1.0102 -0.848862</acceleration>
+          <wrench>7.06279 1.49917 -12.5377 0 -0 0</wrench>
+        </link>
+        <link name='right_flap'>
+          <pose frame=''>-12.6475 -3.70887 1.49335 -0.002734 -0.530355 -0.044145</pose>
+          <velocity>-0.00145 0.006654 -0.009275 -0.004861 0.00587 -0.000105</velocity>
+          <acceleration>-0.064944 0.828007 -0.149586 -0.064801 -1.37845 -0.034388</acceleration>
+          <wrench>-0.129889 1.65602 -0.299171 0 -0 0</wrench>
+        </link>
+        <link name='rudder'>
+          <pose frame=''>-13.1357 -3.71402 0.492535 0.001242 -0.000451 -0.057972</pose>
+          <velocity>0.012652 0.246848 0.000549 -0.021611 0.002663 0.045238</velocity>
+          <acceleration>-0.10182 0.513268 -1.02873 -0.927599 -0.161979 2.69178</acceleration>
+          <wrench>-0.203639 1.02654 -2.05747 0 -0 0</wrench>
+        </link>
+      </include> -->
+
+
+	
+	 <!--<uri>model://cow</uri>
+        <pose frame=''>3 3 0 0 -0 0</pose>
+        <scale>0.01 0.01 0.01</scale>
+        <link name='link_2'>
+          <pose frame=''>3 20.5364 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+	</include>
+
+	<include>
+	 <uri>model://dog</uri>
+        <pose frame=''>3 3 0 0 -0 0</pose>
+        <scale>0.01 0.01 0.01</scale>
+        <link name='link_2'>
+          <pose frame=''>3 20.5364 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link> </include> -->
+
+		<!-- Stop Sign 
+	<include>
+	<uri>model://stop_sign</uri>
+        <pose frame=''>5 -8 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>5 -8 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+    	</include>
+
+	 Fire Hydrant 
+	<include>
+	<uri>model://fire_hydrant</uri>
+        <pose frame=''>10 -7 0 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>10 -7 0 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+	</include>
+
+	<!-- Pine_tree 
+	<include>
+	<uri>model://pine_tree</uri>
+        <pose frame=''>-10 10 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-10 10 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+	</include>-->
+
+
+	
+   
+  </world>
+</sdf>
