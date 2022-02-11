@@ -29,9 +29,11 @@ cd ~/ws_136642/src
 ros2 pkg create --build-type ament_cmake tello_controller
 
 Pliki darknet.py, controller.py i pid.py należy skopiować do folderu:
+
 ~/ws_136642/build/tello_controller/tello_controller
 
 Pobrać plik yolov3.weights ze strony:
+
 https://pjreddie.com/media/files/yolov3.weights
 
 W pliku controller.py w linijce 85 i 86 należy podać ścieżkę do plików yolov3.cfg yolov3.weights i coco.names
@@ -39,9 +41,13 @@ W pliku yolov3.cfg wymiar height i width powinnien być ten sam co w pliku contr
 
 Uruchamiamy gazebo i węzeł g2rr
 Otwieramy nowy terminal i wpisujemy komendy:
+
 source tello_ros_ws/install/setup.bash 
+
 cd ~/ws_136642
+
 source install/setup.bash
+
 ros2 run tello_controller controller
 
 Otwieramy nowy terminal i wpisujemy komendę:
